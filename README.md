@@ -118,33 +118,7 @@ Common error pattern: neutral is the hardest class and gets confused with polar 
 
 ---
 
-## 🧪 Inference Example
 
-```python
-texts = [
-    "Yaar aaj mood bohot kharab hai 😞",
-    "Party mast thi kal, full enjoy kiya!",
-    "@friend tu bohot help kar raha hai, thanks!"
-]
-
-# 1) Clean with the same function used in training
-texts_clean = [clean_text(t) for t in texts]
-
-# 2) Tokenize & pad with the training tokenizer
-seq = tokenizer.texts_to_sequences(texts_clean)
-pad = pad_sequences(seq, maxlen=100, padding="post")
-
-# 3) Predict
-probs = model_bilstm.predict(pad)
-preds = probs.argmax(axis=1)
-labels = ['negative','neutral','positive']
-for t, p in zip(texts, preds):
-    print(f"{t} -> {labels[p]}")
-```
-
-Make sure you reuse the exact cleaning function, tokenizer, and label mapping from training time.
-
----
 
 ## 🔧 Tips & Next Steps
 
@@ -171,13 +145,4 @@ Make sure you reuse the exact cleaning function, tokenizer, and label mapping fr
 
 Released under the MIT License. See LICENSE.
 
----
 
-## 👨‍💻 Authors
-
-- Your Name — add GitHub/LinkedIn links
-- Contributions are welcome via issues/PRs.
-
----
-
-⭐️ If this repo helps your work, consider giving it a star!
