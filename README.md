@@ -47,6 +47,8 @@ sentimix-bilstm/
     ├── sentimix_train.csv
     ├── sentimix_val.csv
     └── sentimix_test.csv
+```
+
 📦 Dataset
 Expected CSV columns:
 tweet: raw text
