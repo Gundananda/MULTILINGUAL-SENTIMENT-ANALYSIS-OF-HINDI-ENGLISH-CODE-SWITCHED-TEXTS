@@ -102,7 +102,6 @@ No pretrained embeddings; try fastText, GloVe, or subword tokenization.
 Consider transformer baselines (XLM‑R, mBERT) for code‑mixed text.
 Class imbalance and sarcasm/irony remain challenging.
 Add attention, class weighting, or focal loss for potential gains.
-
 🧪 Reproducibility
 Save artifacts:
 tokenizer.json, label2id.json, model.h5
@@ -110,5 +109,10 @@ Fix seeds and log dataset versions.
 Keep preprocessing consistent between train and inference.
 📄 License
 Released under the MIT License. See LICENSE.
+
+👨‍💻 Authors
+Your Name — add GitHub/LinkedIn
+Contributions welcome via issues/PRs.
 ⭐️ If this helps your work, a star is appreciated!
 """
+
